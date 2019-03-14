@@ -4,13 +4,27 @@ const cons = (a, b) => {
   return pair;
 };
 
-const car = pair => pair(a => a);
-
-const cdr = pair => pair((a, b) => b);
-
 const isPair = pair => typeof pair === 'function' && pair.isPair === true;
 
+const checkPair = (pair) => {
+  if (!isPair(pair)) {
+    const value = typeof pair === 'object' ? JSON.stringify(pair, null, 2) : String(pair);
+    throw new Error(`Argument must be pair, but it was '${value}'`);
+  }
+};
+
+const car = pair => {
+  checkPair(pair);
+  return pair(a => a);
+};
+
+const cdr = pair => {
+  checkPair(pair);
+  return pair((a, b) => b);
+};
+
 const toString = (pair) => {
+  checkPair(pair);
   const iter = (p) => {
     if (!isPair(p)) {
       return String(p);
@@ -24,5 +38,5 @@ const toString = (pair) => {
 };
 
 export {
-  cons, car, cdr, isPair, toString,
+  cons, car, cdr, isPair, toString, checkPair,
 };
