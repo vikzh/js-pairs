@@ -1,0 +1,38 @@
+{
+  "name": "jspairs",
+  "version": "1.0.0",
+  "description": "Pair data structure on native js",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikzh/js-pairs.git"
+  },
+  "keywords": [
+    "pair",
+    "data structure",
+    "native"
+  ],
+  "author": "Viktor zhukovsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikzh/js-pairs/issues"
+  },
+  "homepage": "https://github.com/vikzh/js-pairs#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-flowtype": "^3.2.1",
+    "eslint-plugin-import": "^2.15.0"
+  }
+}
