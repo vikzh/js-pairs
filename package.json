@@ -1,12 +1,13 @@
 {
-  "name": "jspairs",
-  "version": "1.0.0",
+  "name": "pairs-js",
+  "version": "1.0.1",
   "description": "Pair data structure on native js",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
     "build": "NODE_ENV=production babel src --out-dir dist",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "documentation": "documentation"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "@babel/preset-env": "^7.3.4",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.5.0",
+    "documentation": "^9.3.1",
     "eslint": "^5.14.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-babel": "^5.3.0",
