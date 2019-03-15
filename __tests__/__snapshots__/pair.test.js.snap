@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pair #checkPair 1`] = `"Argument must be pair, but it was 'test'"`;
+
+exports[`Pair #checkPair 2`] = `"Argument must be pair, but it was '2345'"`;
+
+exports[`Pair #checkPair 3`] = `"Argument must be pair, but it was '() => 1'"`;
+
+exports[`Pair #checkPair 4`] = `
+"Argument must be pair, but it was '{
+  \\"key\\": \\"testValue\\"
+}'"
+`;
