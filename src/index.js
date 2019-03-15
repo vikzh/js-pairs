@@ -13,12 +13,12 @@ const checkPair = (pair) => {
   }
 };
 
-const car = pair => {
+const car = (pair) => {
   checkPair(pair);
   return pair(a => a);
 };
 
-const cdr = pair => {
+const cdr = (pair) => {
   checkPair(pair);
   return pair((a, b) => b);
 };
